@@ -1,13 +1,17 @@
 /* start of the css file */
 
+@import url('https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 *{
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-family: 'Kdam Thmor Pro', sans-serif;
     margin: 0;
     padding: 0;
     color: #ffa500;
     scroll-behavior: smooth;
     box-sizing: border-box;
 }
+
+/* modifying body   */
 
 body{
     background-color: #2e2e2e
@@ -37,7 +41,6 @@ body{
 
 .header{
     display: flex;
-    font-family: 'Noto Kufi Arabic', sans-serif;
     position: fixed;
     top: 0;
     justify-content: space-between;
@@ -80,6 +83,7 @@ body{
     background: url(goals_re-edited.jpg);
     background-size: cover;
     min-height: 100vh;
+    font-size: 1.2em;
 }
 
 .section1 .container{
@@ -90,9 +94,9 @@ body{
     background: linear-gradient(to right, 
     rgb(0, 0, 0) 10%,
     rgba(255, 255, 255, 0));
-    background: linear-gradient(to top,
+    /* background: linear-gradient(to top,
     #000,
-    #00000000);
+    #00000000); */
 }
 
 .main-logo{
@@ -394,26 +398,130 @@ hr {
 
 @media (max-width:450px) {
     
+/* header  */
+
+    .header{
+        top: 0;
+        justify-content:start;
+    }
+
+    .header .header-logo{
+        padding-left: 2px;
+        width: 70px;
+        height: 70px;
+    }
+    
+    .header .container{
+        border: 1px solid pink;
+        padding-right: 10px;
+    }
+
+    .header .container a{
+        padding: 3px;
+        font-size: 12px;
+    }
+
+/* section1 */
+
+
+.section1{
+    background: url(goals_re-edited.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+         min-height: 100vh;
+        max-width: 100vh;
+        font-size: .8em;
+    }
+    
+    .section1 .container{
+        display: inline-block;
+        padding-top: 70px;
+        padding-right: 0px;
+        align-items: center;
+
+    }
+
+    .main-logo-container{
+        text-align: center;
+    }
+
+    .main-logo{
+        padding-left: 12px;
+        top: 6px;
+        width: 300px;
+        height: 300px;
+    }
+
+    /* section 2 the matchs of the day */
+    
+    .section2{
+        min-height: 100vh;
+        color: #fff;
+        background: url(section2_re_edited.jpg);
+        background-repeat: repeat;
+    }
+
+    .section2 .cards-container{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        align-items: center;
+        padding-left: 133px; 
+    }
+
+    .cards-container .match1{
+        margin-bottom: 20px;
+    }
+
+    .cards-container .match2{
+        margin-bottom: 20px;
+    }
+
+    .cards-container .match3{
+        margin-bottom: 20px;
+        margin-top: 20px;
+    }
+
+    .cards-container .match4{
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    .cards-container .match5{
+        margin-top: 0;
+        margin-bottom: 0px;
+    }
+
+    .cards-container .match6{
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+}
+
+/* make it responsive website */
+
+@media (max-width:269px) {
+    
     /* header  */
     
         .header{
             top: 0;
-            justify-content:start;
+            justify-content: start;
         }
     
         .header .header-logo{
-            padding-left: 5px;
-            width: 70px;
-            height: 70px;
+            padding-left: 2px;
+            width: 30px;
+            height: 30px;
         }
         
         .header .container{
-            padding-right: 10px;
+            padding-right: 0px;
         }
     
         .header .container a{
-            padding: 3px;
-            font-size: 12px;
+            padding: 1px;
+            font-size: 1px;
         }
     
     /* section1 */
@@ -421,19 +529,16 @@ hr {
     
     .section1{
         background: url(goals_re-edited.jpg);
-        background-size: cover;
+        background-size: contain;
         background-repeat: no-repeat;
              min-height: 100vh;
-            max-width: 100vh;
             font-size: .8em;
         }
         
         .section1 .container{
-            display: inline-block;
-            padding-top: 70px;
-            padding-right: 0px;
-            align-items: center;
-    
+            /* display: inline-block; */
+            padding-top: 20px;
+            padding-right: 0;
         }
     
         .main-logo-container{
@@ -461,7 +566,7 @@ hr {
             flex-wrap: wrap;
             flex-direction: column;
             align-items: center;
-            padding-left: 133px; 
+            padding-left: 73px; 
         }
     
         .cards-container .match1{
@@ -492,103 +597,3 @@ hr {
             margin-bottom: 20px;
         }
     }
-    
-    /* make it responsive website */
-    
-    @media (max-width:269px) {
-        
-        /* header  */
-        
-            .header{
-                top: 0;
-                justify-content:start;
-            }
-        
-            .header .header-logo{
-                padding-left: 5px;
-                width: 50px;
-                height: 50px;
-            }
-            
-            .header .container{
-                padding-right: 6px;
-            }
-        
-            .header .container a{
-                padding: 3px;
-                font-size: 8px;
-            }
-        
-        /* section1 */
-        
-        
-        .section1{
-            background: url(goals_re-edited.jpg);
-            background-size: contain;
-            background-repeat: no-repeat;
-                 min-height: 100vh;
-                font-size: .8em;
-            }
-            
-            .section1 .container{
-                /* display: inline-block; */
-                padding-top: 20px;
-                padding-right: 0;
-            }
-        
-            .main-logo-container{
-                text-align: center;
-            }
-        
-            .main-logo{
-                padding-left: 12px;
-                top: 6px;
-                width: 300px;
-                height: 300px;
-            }
-        
-            /* section 2 the matchs of the day */
-            
-            .section2{
-                min-height: 100vh;
-                color: #fff;
-                background: url(section2_re_edited.jpg);
-                background-repeat: repeat;
-            }
-        
-            .section2 .cards-container{
-                display: flex;
-                flex-wrap: wrap;
-                flex-direction: column;
-                align-items: center;
-                padding-left: 73px; 
-            }
-        
-            .cards-container .match1{
-                margin-bottom: 20px;
-            }
-        
-            .cards-container .match2{
-                margin-bottom: 20px;
-            }
-        
-            .cards-container .match3{
-                margin-bottom: 20px;
-                margin-top: 20px;
-            }
-        
-            .cards-container .match4{
-                margin-top: 20px;
-                margin-bottom: 20px;
-            }
-        
-            .cards-container .match5{
-                margin-top: 0;
-                margin-bottom: 0px;
-            }
-        
-            .cards-container .match6{
-                margin-top: 20px;
-                margin-bottom: 20px;
-            }
-        }
